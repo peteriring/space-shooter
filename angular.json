@@ -41,6 +41,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "/space-shooter/",
               "deployUrl": "/space-shooter/",
               "optimization": true,
               "outputHashing": "all",
