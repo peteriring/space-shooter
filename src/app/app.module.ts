@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BackgroundComponent, SplashComponent } from './@core/components';
 import { Loader } from './@core/services';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, BackgroundComponent, SplashComponent],
@@ -17,6 +18,7 @@ import { Loader } from './@core/services';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    RouterModule,
   ],
   providers: [Loader],
   bootstrap: [AppComponent],

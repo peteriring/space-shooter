@@ -5,6 +5,10 @@ import { Injectable } from '@angular/core';
 export class Loader extends AssetLoader {
   public readonly baseUrl = 'assets/sprites';
 
+  private isCompleted: boolean = false;
+
+  private callbacks: Array<Function> = [];
+
   public constructor() {
     super();
     this.add('bg_far', 'city.png');
@@ -14,6 +18,8 @@ export class Loader extends AssetLoader {
     this.add('trail', 'trail.png');
     this.add('explosion', 'mc.json');
     this.load();
+
+    this.onComplete.add(() => this.completed());
   }
 
   public get(hash: string): Texture {
@@ -33,5 +39,20 @@ export class Loader extends AssetLoader {
     return Object.keys(this.resources[hash].data.frames)
       .sort()
       .map((frame) => Texture.from(frame));
+  }
+
+  public whenCompleted(cb: Function) {
+    this.callbacks.push(cb);
+    if (this.isCompleted) this.callCallbacks();
+  }
+
+  private callCallbacks() {
+    this.callbacks.forEach((cb) => cb());
+    this.callbacks = [];
+  }
+
+  private completed() {
+    this.isCompleted = true;
+    this.callCallbacks();
   }
 }

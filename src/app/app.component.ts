@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Loader } from './@core/services';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public isLoading: boolean = true;
 
-  constructor() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 0);
+  constructor(private readonly loader: Loader) {
+    this.loader.whenCompleted(() =>
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 2000)
+    );
   }
 }

@@ -68,7 +68,7 @@ export class GameComponent extends Container implements OnInit, OnDestroy {
       view: this.canvas.nativeElement,
     }) as Renderer;
 
-    this.loader.onComplete.add(() => this.initialize());
+    this.loader.whenCompleted(() => this.initialize());
   }
 
   public ngOnDestroy(): void {
