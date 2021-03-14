@@ -1,9 +1,10 @@
 import { Loader as AssetLoader, Texture } from 'pixi.js';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class Loader extends AssetLoader {
-  public readonly baseUrl = 'assets/sprites';
+  public readonly baseUrl = `${environment.assetUrl}/sprites`;
 
   private isCompleted: boolean = false;
 

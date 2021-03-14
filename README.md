@@ -44,4 +44,9 @@ npm install
 
 ## Getting started
 
-To start the application with browser rendering, run: `npm run start`
+To start the application
+```
+npm run start
+```
+
+The application should be reachable under: [http://localhost:4200/](http://localhost:4200/)

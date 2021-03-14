@@ -17,8 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "/",
-            "deployUrl": "https://peteriring.github.io/space-shooter/",
+            "deployUrl": "/",
             "outputPath": "dist/space-shooter",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -42,6 +41,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "deployUrl": "/space-shooter/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
