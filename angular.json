@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "baseHref": "/",
-            "deployUrl": "/space-shooter",
+            "deployUrl": "/space-shooter/",
             "outputPath": "dist/space-shooter",
             "index": "src/index.html",
             "main": "src/main.ts",
