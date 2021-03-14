@@ -15,8 +15,8 @@ export interface Class<T> {
 }
 
 export function ControlFactory<T extends Control>(
-  klass: Class<T>,
+  Ctor: Class<T>,
   ...args: any[]
 ): (target: ControlledGraphics<T>) => T {
-  return (target) => new klass(target, ...args);
+  return (target) => new Ctor(target, ...args);
 }
