@@ -1,25 +1,28 @@
 # SpaceShooter
 
-_This is the solution to the task given by Play'n GO team_
+_This is a solution to the task given by Play'n GO team_
 
 ---
 
 **NOTE:**
 
-Please take into consideration that the project was built under Windows OS, it might not contain full solution for other systems
+Please take into consideration that the project was built under Windows OS, it might not contain full solution for other systems.
 
 ---
 
-The application was written with a variety of features and usecases in mind, and to be extendable in the future.
-The framework chosen for the task was [angular](https://angular.io/docs/), with the recommended uikit [pixi.js](https://www.pixijs.com/).
+The application was written with a variety of features and use-cases in mind, such as being extendable in the future.
+The framework chosen for the task was [angular](https://angular.io/docs/), and [bootstrap](https://getbootstrap.com/), with the appropriate adapter package [ng-bootstrap](https://ng-bootstrap.github.io/#/home). It uses the recommended uikit [pixi.js](https://www.pixijs.com/).
 
-Testing is not yet implemented.
+The build was tested on the following browsers:
+- Chrome v89.0.4389.82
+- Firefox v86.0.1
+- Edge v89.0.774.54
 
-The application is currently not handling any configuration options well. It would be a nice addition to parse the environment variables to modify them.
 
 ## Demo
 
 The live application is reachable on git pages.
+
 [https://peteriring.github.io/space-shooter/](https://peteriring.github.io/space-shooter/)
 
 ## Installation
@@ -50,3 +53,16 @@ npm run start
 ```
 
 The application should be reachable under: [http://localhost:4200/](http://localhost:4200/)
+
+
+## Creating builds
+
+To create a development build, run:
+```
+npm run build
+```
+
+To create a production build, run:
+```
+npm run build:prod
+```
